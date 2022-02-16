@@ -1,0 +1,233 @@
+$dark-color: hsla(0, 0%, 0%, 1)
+$light-color: hsla(0, 0%, 98%, 1)
+$light-medium-color: hsla(0, 0%, 74%, 1)
+$accent-color: hsla(28, 87%, 62%, 1)
+$font-primary: 'Montserrat', sans-serif
+$font-secondary: 'Playfair Display', serif
+
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html,
+body
+  height: 100%
+  min-height: 100vh
+
+  background: $light-color
+  padding-bottom: 61px
+
+  font-family: $font-primary
+  font-size: 14px
+  line-height: 25px
+  font-weight: 400
+  color: hsla(0, 0%, 20%, 1)
+
+body
+
+a
+  color: $light-color
+  text-decoration: none
+  font-weight: 500
+
+  &:active,
+  &:focus,
+  &:hover,
+    color: $light-color
+
+img
+  width: 100%
+
+.container
+  margin: 0 auto
+  padding: 0 11px
+
+.main 
+  margin-top: 32px
+  margin-bottom: 26px
+
+.post
+  &-title
+    font-family: $font-secondary
+    font-size: 24px
+    line-height: 31px
+    font-weight: 700
+    margin-bottom: 12px
+
+    &-section
+      font-family: $font-secondary
+      font-weight: 700
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 13px
+
+      &.lg
+        font-size: 24px
+        line-height: 32px
+        margin-bottom: 28px
+
+  &-subtitle
+    font-family: $font-secondary
+    font-weight: 400
+    font-style: italic
+    font-size: 16px
+    line-height: 21px
+    margin-bottom: 24px
+
+  &-description
+    font-family: $font-primary
+    font-weight: 500
+    font-style: italic
+    font-size: 12px
+    line-height: 15px
+
+    display: flex
+    gap: 1rem
+    align-items: start
+
+    > .icon
+      margin-top: .22rem
+
+  &-img
+    margin-top: 24px
+    margin-bottom: 24px
+
+    > img
+      border-radius: 12px
+      min-height: 214px
+      object-fit: fill
+
+  &-section
+    margin-bottom: 42px
+
+  &-instructions
+
+.metric
+  &s
+    &-duration
+      display: flex
+      justify-content: space-between
+      gap: 1rem
+      margin-bottom: 30px
+
+    &-item
+      display: flex
+      grid-gap: 1rem
+      align-items: center
+
+    &-yield
+      margin-bottom: 20px
+
+      .metric
+        &-time
+          color: $accent-color
+
+        &-img
+          filter: invert(83%) sepia(18%) saturate(6003%) hue-rotate(325deg) brightness(99%) contrast(92%)
+
+
+  &-img
+    width: auto
+
+  &-body
+    width: 100%
+
+  &-title
+    display: block
+    color: $light-medium-color
+    font-size: 8px
+    line-height: 10px
+    text-transform: uppercase
+
+  &-time
+    display: block
+    font-size: 10px
+    line-height: 12px
+
+.ingredient
+  &-list
+    list-style: none
+
+  &-item
+    display: flex
+    gap: 8px
+    margin-bottom: 15px
+
+.instruction
+  &-list
+    list-style: none
+    padding-left: 40px
+
+  &-item
+    margin: 0 0 25px 0
+    counter-increment: my-awesome-counter
+    position: relative
+    font-size: 16px
+    line-height: 24px
+
+    &::before
+      content: counter(my-awesome-counter)
+      color: $light-color
+      font-family: $font-secondary
+      font-size: 24px
+      line-height: 1
+      font-weight: 700
+
+      position: absolute
+      width: 32px
+      height: 32px
+      left: -42px
+      top: 4px
+
+      background-color: $accent-color
+      border-radius: 6px
+      text-align: center
+      z-index: 1
+
+input[type=checkbox]
+  display: none
+
+  + label
+    &.checkbox-label
+      position: relative
+      cursor: pointer
+
+    &::before
+      content: ''
+      background-color: transparent
+      border: 1px solid hsla(0, 0%, 51%, 1)
+      cursor: pointer
+
+      padding: 10px
+      display: inline-block
+      position: relative
+      vertical-align: middle
+      border-radius: 4px
+      
+  
+  &:checked + label::after
+    content: ''
+    display: block
+    position: absolute
+    top: 2px
+    left: 9px
+    width: 6px
+    height: 14px
+
+    border: solid $dark-color
+    border-width: 0 2px 2px 0
+    transform: rotate(45deg)
+
+.icon
+  width: auto
+
+.main-footer
+  padding-bottom: 3rem
+  .reference-link
+    color: $light-medium-color
+    white-space: pre-line
+    font-size: 12px
+    line-height: 18px
