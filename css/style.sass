@@ -231,3 +231,111 @@ input[type=checkbox]
     white-space: pre-line
     font-size: 12px
     line-height: 18px
+    font-weight: 400
+
+@media screen and (min-width: 998px)
+  html,
+  body
+    font-size: 16px
+
+  main,
+  .main
+    display: grid
+    grid-template-areas: "p-hero p-hero" "p-ingredients p-aside" "p-instructions ."
+    grid-template-columns: 4fr 1fr
+    column-gap: 50px
+
+    .post
+      &-hero
+        grid-area: p-hero
+      
+      &-metrics
+        grid-area: p-aside
+        display: flex
+        flex-direction: column
+
+      &-ingredients
+        grid-area: p-ingredients
+      
+      &-instructions
+        grid-area: p-instructions
+
+      &-title
+        font-size: 48px
+        line-height: 64px
+        grid-area: p-title
+
+        &-container
+          display: grid
+          grid-template-areas: "p-title ." "p-description ."
+          grid-template-columns: 4fr 1fr
+          column-gap: 110px
+
+        &-section
+          font-size: 24px
+          line-height: 32px
+          margin-bottom: 32px
+
+      &-description
+        font-size: 14px
+        line-height: 17px
+        grid-area: p-description
+
+      &-subtitle
+        font-size: 18px
+        line-height: 24px
+        margin-bottom: 31px
+
+      &-section
+        margin-bottom: 38px
+
+      &-img
+        margin-top: 48px
+        margin-bottom: 48px
+
+    .metric
+      &s
+        &-yield
+          margin-bottom: 43px
+
+        &-duration
+          flex-direction: column
+          gap: 43px
+          margin-bottom: 0
+
+        &-item
+          grid-column-gap: 42px
+          grid-column-gap: 14px
+
+      &-title
+        font-size: 10px
+        line-height: 12px
+        margin-bottom: 4px
+
+      &-time
+        font-size: 14px
+        line-height: 17px
+
+      &-img
+        height: 25px
+
+  .container
+    max-width: 1220px
+
+  .card
+    background: white
+    padding: 57px 44px
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 12px
+    max-width: 216px
+
+  .main-footer
+    .reference-link
+      white-space: normal
+      font-size: 16px
+      line-height: 24px
+
+@media screen and (min-width: 1220px)
+  main,
+  .main
+    column-gap: 110px
