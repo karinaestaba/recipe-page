@@ -1,4 +1,4 @@
-# Dev Challenges - Page 404
+# Dev Challenges - Recipe Page
 
 This is a solution to the [Recipe blog challenge on Dev Challenges](https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht). Challenge: Create a recipe page following the given design. You can use your own recipe and remember to put the source. The page should be responsive.
 
