@@ -1,4 +1,5 @@
 $dark-color: hsla(0, 0%, 0%, 1)
+$medium-color: hsla(0, 0%, 51%, 1)
 $light-color: hsla(0, 0%, 98%, 1)
 $light-medium-color: hsla(0, 0%, 74%, 1)
 $accent-color: hsla(28, 87%, 62%, 1)
@@ -232,6 +233,24 @@ input[type=checkbox]
     font-size: 12px
     line-height: 18px
     font-weight: 400
+
+footer
+  &.credits
+    font-size: 12px
+    line-height: 16px
+    text-align: center
+    color: $medium-color
+    padding-bottom: 20px
+
+    a
+      color: lighten($dark-color, 45%)
+      font-weight: 700
+      text-decoration: none
+
+      &:hover,
+      &:active,
+      &:focus
+        color: darken($medium-color, 10%)
 
 @media screen and (min-width: 998px)
   html,
