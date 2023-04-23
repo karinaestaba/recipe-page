@@ -27,8 +27,6 @@ body
   font-weight: 400
   color: hsla(0, 0%, 20%, 1)
 
-body
-
 a
   color: $light-color
   text-decoration: none
@@ -36,7 +34,7 @@ a
 
   &:active,
   &:focus,
-  &:hover,
+  &:hover
     color: $light-color
 
 img
@@ -104,8 +102,6 @@ img
   &-section
     margin-bottom: 42px
 
-  &-instructions
-
 .metric
   &s
     &-duration
@@ -128,7 +124,6 @@ img
 
         &-img
           filter: invert(83%) sepia(18%) saturate(6003%) hue-rotate(325deg) brightness(99%) contrast(92%)
-
 
   &-img
     width: auto
@@ -243,14 +238,18 @@ footer
     padding-bottom: 20px
 
     a
-      color: lighten($dark-color, 45%)
-      font-weight: 700
+      color: $accent-color
       text-decoration: none
+      white-space: nowrap
+      transition: all 0.5s ease
 
       &:hover,
       &:active,
       &:focus
-        color: darken($medium-color, 10%)
+        color: darken($accent-color, 15%)
+
+    img
+      width: 10px
 
 @media screen and (min-width: 998px)
   html,
